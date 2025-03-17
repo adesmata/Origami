@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckr2gbjieutve"]
+
+[node name="CharacterCreation" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 61.4267

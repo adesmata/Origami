@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0t326h5de7vf"]
+[gd_scene load_steps=6 format=3 uid="uid://b0t326h5de7vf"]
 
 [ext_resource type="Theme" uid="uid://cmbvmfovhbcns" path="res://assets/themes/menu.tres" id="1_n4tde"]
 [ext_resource type="Script" uid="uid://bfrkedca2e1tc" path="res://assets/scripts/button.gd" id="1_vxja4"]
 [ext_resource type="FontFile" uid="uid://c745jhorjjwqe" path="res://assets/fonts/Inter_28pt-Regular.ttf" id="2_vxja4"]
+[ext_resource type="Script" uid="uid://ndfuv3akyky3" path="res://assets/scenes/enter.gd" id="4_3fu82"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4hy44"]
 font_color = Color(0.215686, 0.407843, 0.243137, 1)
@@ -41,3 +42,4 @@ theme_override_fonts/font = ExtResource("2_vxja4")
 theme_override_font_sizes/font_size = 24
 text = "enter"
 flat = true
+script = ExtResource("4_3fu82")
