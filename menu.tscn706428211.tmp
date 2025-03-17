@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcutsv57gcbfp"]
+
+[ext_resource type="Theme" uid="uid://cmbvmfovhbcns" path="res://assets/themes/menu.tres" id="1_4hy44"]
+[ext_resource type="FontFile" uid="uid://c8ylldihcd2dh" path="res://assets/fonts/Inter_18pt-Black.ttf" id="2_4hy44"]
+[ext_resource type="FontFile" uid="uid://c745jhorjjwqe" path="res://assets/fonts/Inter_28pt-Regular.ttf" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://d3274pefga5qt" path="res://assets/bg/Japanese.png" id="4_4hy44"]
+[ext_resource type="PackedScene" uid="uid://b0t326h5de7vf" path="res://button.tscn" id="5_ytr4m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l48gv"]
+font = ExtResource("2_4hy44")
+font_size = 81
+font_color = Color(0.215686, 0.407843, 0.243137, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecwwl"]
+line_spacing = 0.0
+font = ExtResource("3_ytr4m")
+font_size = 28
+font_color = Color(0.215686, 0.407843, 0.243137, 1)
+outline_color = Color(0.215686, 0.407843, 0.243137, 1)
+shadow_size = 0
+
+[sub_resource type="GDScript" id="GDScript_ytr4m"]
+
+[node name="Menu" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4hy44")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.5
+offset_top = -164.0
+offset_right = 292.5
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -20
+
+[node name="Title" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "ORIGAMI"
+label_settings = SubResource("LabelSettings_l48gv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "character creation tool"
+label_settings = SubResource("LabelSettings_ecwwl")
+horizontal_alignment = 1
+
+[node name="JapeneseText" type="TextureRect" parent="Control"]
+texture_filter = 6
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -229.0
+offset_right = 260.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4hy44")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" parent="Control" instance=ExtResource("5_ytr4m")]
+layout_mode = 1
+offset_left = -36.0
+offset_top = -20.0
+offset_right = 36.0
+offset_bottom = 20.0
+
+[node name="Timer" type="Timer" parent="Control/Button"]
+script = SubResource("GDScript_ytr4m")
