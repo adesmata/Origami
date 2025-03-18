@@ -21,8 +21,8 @@ config/size/viewport_height=648
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=640
+window/size/viewport_height=360
 
 [gui]
 

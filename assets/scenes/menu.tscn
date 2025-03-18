@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcutsv57gcbfp"]
+[gd_scene load_steps=10 format=3 uid="uid://dcutsv57gcbfp"]
 
 [ext_resource type="Theme" uid="uid://cmbvmfovhbcns" path="res://assets/themes/menu.tres" id="1_4hy44"]
 [ext_resource type="FontFile" uid="uid://c8ylldihcd2dh" path="res://assets/fonts/Inter_18pt-Black.ttf" id="2_4hy44"]
 [ext_resource type="FontFile" uid="uid://c745jhorjjwqe" path="res://assets/fonts/Inter_28pt-Regular.ttf" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://d3274pefga5qt" path="res://assets/bg/Japanese.png" id="4_4hy44"]
-[ext_resource type="Script" uid="uid://cd7t71c10qdqo" path="res://assets/scenes/japenese_text.gd" id="5_l0v2w"]
+[ext_resource type="Script" uid="uid://cd7t71c10qdqo" path="res://assets/scripts/japenese_text.gd" id="5_l0v2w"]
 [ext_resource type="PackedScene" uid="uid://b0t326h5de7vf" path="res://assets/scenes/button.tscn" id="5_ytr4m"]
+[ext_resource type="Script" uid="uid://ctodmp28i37im" path="res://assets/scripts/options.gd" id="7_0wlwb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l48gv"]
 font = ExtResource("2_4hy44")
@@ -78,23 +79,40 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -271.0
-offset_top = -229.0
+offset_top = -93.0
 offset_right = 260.0
-offset_bottom = 36.0
+offset_bottom = 172.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_4hy44")
-expand_mode = 1
+expand_mode = 2
 stretch_mode = 5
 script = ExtResource("5_l0v2w")
+rotate_speed = 0.795
 
 [node name="Button" parent="Control" instance=ExtResource("5_ytr4m")]
 texture_filter = 2
 layout_mode = 1
-offset_left = -36.0
-offset_top = -20.0
-offset_right = 36.0
-offset_bottom = 20.0
+offset_left = -36.5
+offset_top = 36.0
+offset_right = 36.5
+offset_bottom = 76.0
 theme = ExtResource("1_4hy44")
 theme_override_constants/separation = 0
-fade_duration = 0.5
+
+[node name="Button2" parent="Control" instance=ExtResource("5_ytr4m")]
+texture_filter = 2
+layout_mode = 1
+offset_left = -36.5
+offset_top = 68.0
+offset_right = 36.5
+offset_bottom = 108.0
+theme = ExtResource("1_4hy44")
+theme_override_constants/separation = 0
+text = "options"
+
+[node name="Button" parent="Control/Button2" index="1"]
+text = "options"
+script = ExtResource("7_0wlwb")
+
+[editable path="Control/Button2"]
