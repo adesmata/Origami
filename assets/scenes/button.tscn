@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0t326h5de7vf"]
+[gd_scene load_steps=7 format=3 uid="uid://b0t326h5de7vf"]
 
 [ext_resource type="Theme" uid="uid://cmbvmfovhbcns" path="res://assets/themes/menu.tres" id="1_n4tde"]
 [ext_resource type="Script" uid="uid://bfrkedca2e1tc" path="res://assets/scripts/button.gd" id="1_vxja4"]
@@ -8,23 +8,29 @@
 [sub_resource type="LabelSettings" id="LabelSettings_4hy44"]
 font_color = Color(0.215686, 0.407843, 0.243137, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fu82"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Button" type="HBoxContainer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -28.0
+offset_left = -36.0
 offset_top = 28.0
-offset_right = 28.0
+offset_right = 36.0
 offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 script = ExtResource("1_vxja4")
 text = "enter"
 
 [node name="Arrow" type="Label" parent="."]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+texture_filter = 4
 layout_mode = 2
 size_flags_horizontal = 4
 text = " "
@@ -32,14 +38,21 @@ label_settings = SubResource("LabelSettings_4hy44")
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true
-texture_filter = 5
+texture_filter = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_n4tde")
+theme_override_colors/font_disabled_color = Color(0.215686, 0.407843, 0.243137, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.215686, 0.407843, 0.243137, 1)
+theme_override_colors/font_hover_color = Color(0.215686, 0.407843, 0.243137, 1)
+theme_override_colors/font_outline_color = Color(0.215686, 0.407843, 0.243137, 1)
 theme_override_colors/font_color = Color(0.215686, 0.407843, 0.243137, 1)
+theme_override_colors/font_focus_color = Color(0.215686, 0.407843, 0.243137, 1)
+theme_override_colors/font_pressed_color = Color(0.215686, 0.407843, 0.243137, 1)
 theme_override_fonts/font = ExtResource("2_vxja4")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxFlat_3fu82")
 text = "enter"
 flat = true
 script = ExtResource("4_3fu82")

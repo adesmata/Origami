@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcutsv57gcbfp"]
+[gd_scene load_steps=9 format=3 uid="uid://dcutsv57gcbfp"]
 
 [ext_resource type="Theme" uid="uid://cmbvmfovhbcns" path="res://assets/themes/menu.tres" id="1_4hy44"]
 [ext_resource type="FontFile" uid="uid://c8ylldihcd2dh" path="res://assets/fonts/Inter_18pt-Black.ttf" id="2_4hy44"]
 [ext_resource type="FontFile" uid="uid://c745jhorjjwqe" path="res://assets/fonts/Inter_28pt-Regular.ttf" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://d3274pefga5qt" path="res://assets/bg/Japanese.png" id="4_4hy44"]
+[ext_resource type="Script" uid="uid://cd7t71c10qdqo" path="res://assets/scenes/japenese_text.gd" id="5_l0v2w"]
 [ext_resource type="PackedScene" uid="uid://b0t326h5de7vf" path="res://assets/scenes/button.tscn" id="5_ytr4m"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_l48gv"]
@@ -85,10 +86,15 @@ grow_vertical = 2
 texture = ExtResource("4_4hy44")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("5_l0v2w")
 
 [node name="Button" parent="Control" instance=ExtResource("5_ytr4m")]
+texture_filter = 2
 layout_mode = 1
 offset_left = -36.0
 offset_top = -20.0
 offset_right = 36.0
 offset_bottom = 20.0
+theme = ExtResource("1_4hy44")
+theme_override_constants/separation = 0
+fade_duration = 0.5

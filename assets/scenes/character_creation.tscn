@@ -1,6 +1,15 @@
-[gd_scene format=3 uid="uid://ckr2gbjieutve"]
+[gd_scene load_steps=3 format=3 uid="uid://ckr2gbjieutve"]
+
+[ext_resource type="Script" uid="uid://b0kg1otkgfkvo" path="res://assets/scenes/camera_follow.gd" id="1_gbvli"]
+[ext_resource type="PackedScene" uid="uid://kmnlr051fdmk" path="res://assets/models/floor_kitchen.fbx" id="1_wg6e2"]
 
 [node name="CharacterCreation" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 fov = 61.4267
+script = ExtResource("1_gbvli")
+
+[node name="floor_kitchen" parent="." instance=ExtResource("1_wg6e2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.570621, -0.925851, -3.79828)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
